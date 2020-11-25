@@ -28,9 +28,14 @@ public class Main {
 
         System.out.println("Faktura nr: " + " " + sale.getInvoiceNr());
         System.out.println("Data wystawienia: " + LocalDate.now());
-        System.out.println(product.getName() + " " + product.getCatalogNumber() + " Ilość : 5");
+        System.out.println(product.getName() + " " + product.getCatalogNumber());
+        System.out.println("Cena brutto za sztukę : " + df.format(taxCount.calculateGrossPrice(product)));
         System.out.println("Do zapłaty:");
         System.out.println(df.format(sale.payForAll(product, new BigDecimal("5.0"))));
+
+        //todo przerobić metodę sale.payForAll tak by przyjmowałą dowolną liczbę produktów
+        //todo przerobić zmienne quantity na typy proste i przerobić metodę payForAll żeby przyjmowała takie argumenty
+        //todo zrobić tak aby przy wydruku ilość sztuk była przyjmowana z argumentu a nie wpisywana ręcznie
 
 
 
