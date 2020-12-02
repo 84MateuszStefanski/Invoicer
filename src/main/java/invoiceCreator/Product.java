@@ -1,6 +1,7 @@
 package invoiceCreator;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Product {
 
@@ -35,4 +36,5 @@ public class Product {
     public void setQuantity(BigDecimal quantity) {
         this.quantity = quantity;
     }
+
 }
