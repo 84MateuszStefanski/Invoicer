@@ -4,8 +4,6 @@ import java.math.BigDecimal;
 
 public class Sale {
 
-    private Client client;
-    private Product product;
     private BigDecimal quantity = new BigDecimal(0);
     private int invoiceNr = 1;
 
@@ -46,7 +44,6 @@ public class Sale {
 //        }
 //        return payAllItems;
 //    }
-
 
 
     public int getInvoiceNr() {

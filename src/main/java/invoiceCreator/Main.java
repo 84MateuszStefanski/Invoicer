@@ -47,18 +47,15 @@ public class Main {
       //  System.out.println(df.format(sale.payForAllitems(new BigDecimal("5.0"), product, product2)));
 
         //todo przerobić metodę sale.payForAll tak by przyjmowałą dowolną liczbę produktów
-        //todo przerobić zmienne quantity na typy proste i przerobić metodę payForAll żeby przyjmowała takie argumenty
+        //todo ??przerobić zmienne quantity na typy proste i przerobić metodę payForAll żeby przyjmowała takie argumenty o ile taką praktykę się stosuje(do weryfikacji)
         //todo zrobić tak aby przy wydruku ilość sztuk była przyjmowana z argumentu a nie wpisywana ręcznie
+        //todo klasy product i sale tak aby narzucać marżę na cenę zakupu produktu
 
         System.out.println(product.equals(product2));
         System.out.println(product.hashCode());
         System.out.println(product2.hashCode());
 
         //poniżej kod treningowy nie związany z apliakcją
-
-
-
-
 
         try {
             Formatter f = new Formatter("D:\\Programowanie\\Java.Workplace\\test.txt");

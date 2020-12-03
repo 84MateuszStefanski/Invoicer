@@ -23,5 +23,7 @@ public class RegisterClient {
          return validator;
     }
 
-
+    public List<Client> getClientList() {
+        return clientList;
+    }
 }
