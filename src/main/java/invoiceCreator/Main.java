@@ -34,22 +34,30 @@ public class Main {
         System.out.println(registerProduct.getProductList());
 
         Sale sale = new Sale();
-        TaxCount taxCount = new TaxCount();
+        TaxAndPriceCount taxAndPriceCount = new TaxAndPriceCount();
         DecimalFormat df = new DecimalFormat("#,###.00");
+        System.out.println("Cena zakupu netto " + product.getPurchacePriceNet());
+        System.out.println("Cena zakupu brutto " + df.format(taxAndPriceCount.calculateGrossPrice(product)));
+
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------");
 
         System.out.println("Faktura nr: " + " " + sale.getInvoiceNr());
         System.out.println("Data wystawienia: " + LocalDate.now());
         System.out.println(product.getName() + " " + product.getCatalogNumber());
-        System.out.println("Cena brutto za sztukę : " + df.format(taxCount.calculateGrossPrice(product)));
+        System.out.println("Cena brutto za sztukę : " + df.format(taxAndPriceCount.calculateGrossRetailPrice(product)));
         System.out.println("Do zapłaty:");
-        System.out.println(df.format(sale.payForAll(product, new BigDecimal("1.0"))));
+        System.out.println(df.format(sale.payForAll(product, new BigDecimal("3.0"))));
 
-      //  System.out.println(df.format(sale.payForAllitems(new BigDecimal("5.0"), product, product2)));
+        System.out.println("--------------------------------------------------------------");
+        System.out.println("--------------------------------------------------------------");
+
+        //todo popracować nad narzucaniem marży i poprawić testy po zmianach w klasach tax i sale
 
         //todo przerobić metodę sale.payForAll tak by przyjmowałą dowolną liczbę produktów
         //todo ??przerobić zmienne quantity na typy proste i przerobić metodę payForAll żeby przyjmowała takie argumenty o ile taką praktykę się stosuje(do weryfikacji)
         //todo zrobić tak aby przy wydruku ilość sztuk była przyjmowana z argumentu a nie wpisywana ręcznie
-        //todo klasy product i sale tak aby narzucać marżę na cenę zakupu produktu
+
 
         System.out.println(product.equals(product2));
         System.out.println(product.hashCode());

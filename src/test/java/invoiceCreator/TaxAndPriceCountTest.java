@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-class TaxCountTest {
+class TaxAndPriceCountTest {
 
     @Test
     void shouldCalculateTax() {
@@ -16,10 +16,10 @@ class TaxCountTest {
         Product product = new Product("Nazwa", "Nr katalogowy", new BigDecimal("100"), new BigDecimal("5"));
         BigDecimal tax = new BigDecimal(0.23);
         DecimalFormat df = new DecimalFormat("#,###.00");
-        TaxCount taxCount = new TaxCount();
+        TaxAndPriceCount taxAndPriceCount = new TaxAndPriceCount();
 
         //when
-        BigDecimal result = taxCount.calculateTax(product);
+        BigDecimal result = taxAndPriceCount.calculateTax(product);
 
         //then
         assertThat(result).isEqualTo(new BigDecimal("23.0000000000000009992007221626408863812685012817382812500"));
@@ -34,10 +34,10 @@ class TaxCountTest {
         //given
         Product product = new Product("Nazwa", "Nr katalogowy", new BigDecimal("100"), new BigDecimal("5"));
         BigDecimal tax = new BigDecimal(0.23);
-        TaxCount taxCount = new TaxCount();
+        TaxAndPriceCount taxAndPriceCount = new TaxAndPriceCount();
 
         //when
-        BigDecimal result = taxCount.calculateGrossPrice(product);
+        BigDecimal result = taxAndPriceCount.calculateGrossPrice(product);
 
         //then
         assertThat(result).isEqualTo(new BigDecimal("123.0000000000000009992007221626408863812685012817382812500"));

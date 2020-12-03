@@ -7,17 +7,16 @@ public class Sale {
     private BigDecimal quantity = new BigDecimal(0);
     private int invoiceNr = 1;
 
-
     // metoda zwraca pełną kwotę do zapłaty za jeden produkt
     public BigDecimal payForAll(Product product, BigDecimal quantity) throws Exception {
 
         BigDecimal payAll;
-        TaxCount taxCount = new TaxCount();
+        TaxAndPriceCount taxAndPriceCount = new TaxAndPriceCount();
         double productQuantity = product.getQuantity().doubleValue();
         double saleQuantity = quantity.doubleValue();
 
         if (productQuantity >= saleQuantity) {
-            payAll = taxCount.calculateGrossPrice(product).multiply(quantity);
+            payAll = taxAndPriceCount.calculateGrossRetailPrice(product).multiply(quantity);
             product.setQuantity(product.getQuantity().subtract(quantity));
             invoiceNr++;
         } else {
@@ -30,7 +29,7 @@ public class Sale {
 //    public BigDecimal payForAllitems(BigDecimal quantity, Product... products) throws Exception {
 //
 //        BigDecimal payAllItems ;
-//        TaxCount taxCount = new TaxCount();
+//        TaxAndPriceCount taxCount = new TaxAndPriceCount();
 //        double productQuantity = product.getQuantity().doubleValue();
 //        double saleQuantity = quantity.doubleValue();
 //
