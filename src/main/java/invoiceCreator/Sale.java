@@ -25,6 +25,7 @@ public class Sale {
         return payAll;
     }
 
+
     // metoda która ma liczyć całkowity koszt za kilka produktów
 //    public BigDecimal payForAllitems(BigDecimal quantity, Product... products) throws Exception {
 //

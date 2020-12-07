@@ -8,8 +8,8 @@ public class TaxAndPriceCount {
     private BigDecimal grossPrice;
     private BigDecimal taxValue;
     private BigDecimal margin = new BigDecimal("0.2");
-    public BigDecimal netRetailPrice = new BigDecimal("0.0");
-    public BigDecimal grossRetailPrice = new BigDecimal("0.0");
+    private BigDecimal netRetailPrice = new BigDecimal("0.0");
+    private BigDecimal grossRetailPrice = new BigDecimal("0.0");
 
     //purchase price
     public BigDecimal calculateTax(Product product) {

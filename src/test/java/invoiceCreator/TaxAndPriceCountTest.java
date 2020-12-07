@@ -45,4 +45,35 @@ class TaxAndPriceCountTest {
 
 
     }
+
+    @Test
+    void shouldCalculateNetRetailPrice() {
+        //given
+        Product product = new Product("Nazwa", "Nr katalogowy", new BigDecimal("100"), new BigDecimal("5"));
+        BigDecimal tax = new BigDecimal(0.23);
+        TaxAndPriceCount taxAndPriceCount = new TaxAndPriceCount();
+
+        //when
+        BigDecimal result = taxAndPriceCount.calculateNetRetailPrice(product);
+
+        //then
+        assertThat(result).isEqualTo(new BigDecimal("120.0"));
+        assertEquals(120, result.intValue());
+    }
+
+    @Test
+    void shouldCalculateGrossRetailPrice() {
+        //given
+        Product product = new Product("Nazwa", "Nr katalogowy", new BigDecimal("100"), new BigDecimal("5"));
+        BigDecimal tax = new BigDecimal(0.23);
+        TaxAndPriceCount taxAndPriceCount = new TaxAndPriceCount();
+
+        //when
+        BigDecimal result = taxAndPriceCount.calculateGrossRetailPrice(product);
+
+        //then
+        assertThat(result).isEqualTo(new BigDecimal("147.60000000000000119904086659516906365752220153808593750000"));
+        assertEquals(147, result.intValue());
+    }
+
 }
