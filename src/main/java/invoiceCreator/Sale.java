@@ -6,11 +6,11 @@ public class Sale {
 
     private BigDecimal quantity = new BigDecimal(0);
     private int invoiceNr = 1;
+    private BigDecimal payAll = new BigDecimal("0.0");
 
     // metoda zwraca pełną kwotę do zapłaty za jeden produkt
     public BigDecimal payForAll(Product product, BigDecimal quantity) throws Exception {
 
-        BigDecimal payAll;
         TaxAndPriceCount taxAndPriceCount = new TaxAndPriceCount();
         double productQuantity = product.getQuantity().doubleValue();
         double saleQuantity = quantity.doubleValue();
@@ -24,6 +24,7 @@ public class Sale {
         }
         return payAll;
     }
+
 
 
     // metoda która ma liczyć całkowity koszt za kilka produktów
@@ -52,5 +53,9 @@ public class Sale {
 
     public BigDecimal getQuantity() {
         return quantity;
+    }
+
+    public BigDecimal getPayAll() {
+        return payAll;
     }
 }
