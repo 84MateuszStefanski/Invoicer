@@ -20,11 +20,11 @@ public class Main {
         String userChoice;
         do {
             System.out.println();
-            System.out.println("Wybierz, co chcesz zrobić, a następnie zatwierdź enterem:");
-            System.out.println("[1] Dodaj nowego użytkownika");
-            System.out.println("[2] Dodaj nowy produkt");
-            System.out.println("[3] Sprzedaj");
-            System.out.println("[x] Zakończ");
+            System.out.println("Choose what you want to do, then hit with enter:");
+            System.out.println("[1] Add new user");
+            System.out.println("[2] Add new product");
+            System.out.println("[3] Sell");
+            System.out.println("[x] End");
             userChoice = sc.nextLine();
             if (userChoice.trim().equals("1")) {
                 System.out.println("Register new client ");
