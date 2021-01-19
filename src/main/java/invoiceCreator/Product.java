@@ -9,13 +9,6 @@ public class Product {
     private BigDecimal purchacePriceNet;
     private BigDecimal quantity;
 
-    public Product(String name, String catalogNumber, BigDecimal purchacePriceNet, BigDecimal quantity) {
-        this.name = name;
-        this.catalogNumber = catalogNumber;
-        this.purchacePriceNet = purchacePriceNet;
-        this.quantity = quantity;
-    }
-
     public String getName() {
         return name;
     }
@@ -36,4 +29,15 @@ public class Product {
         this.quantity = quantity;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCatalogNumber(String catalogNumber) {
+        this.catalogNumber = catalogNumber;
+    }
+
+    public void setPurchacePriceNet(BigDecimal purchacePriceNet) {
+        this.purchacePriceNet = purchacePriceNet;
+    }
 }

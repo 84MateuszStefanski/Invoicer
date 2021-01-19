@@ -11,17 +11,6 @@ public class Client {
     private String email;
     private long phoneNumber;
 
-    public Client(String companyName, String postCode, String city,
-                  String streetName, String streetNumber, String taxIdNumber, String email, long phoneNumber) {
-        this.companyName = companyName;
-        this.postCode = postCode;
-        this.city = city;
-        this.streetName = streetName;
-        this.streetNumber = streetNumber;
-        this.taxIdNumber = taxIdNumber;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-    }
 
     public String getCompanyName() {
         return companyName;
@@ -39,5 +28,35 @@ public class Client {
         return email;
     }
 
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
 
+    public void setPostCode(String postCode) {
+        this.postCode = postCode;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
+    }
+
+    public void setStreetNumber(String streetNumber) {
+        this.streetNumber = streetNumber;
+    }
+
+    public void setTaxIdNumber(String taxIdNumber) {
+        this.taxIdNumber = taxIdNumber;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }

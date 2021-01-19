@@ -10,8 +10,5 @@
         <module name="untitled" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="invoicer-application" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

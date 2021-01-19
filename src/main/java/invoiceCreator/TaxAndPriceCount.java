@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class TaxAndPriceCount {
 
-    private final BigDecimal tax = new BigDecimal(0.23);
+    private final BigDecimal tax = new BigDecimal("0.23");
     private BigDecimal grossPrice;
     private BigDecimal taxValue;
     private BigDecimal margin = new BigDecimal("0.2");
@@ -32,8 +32,6 @@ public class TaxAndPriceCount {
         grossRetailPrice = calculateNetRetailPrice(product).add(netRetailPrice.multiply(tax));
         return grossRetailPrice;
     }
-
-
 
     public BigDecimal getGrossPrice() {
         return grossPrice;
