@@ -9,6 +9,8 @@ public class Product {
     private BigDecimal purchacePriceNet;
     private BigDecimal quantity;
 
+    
+
     public String getName() {
         return name;
     }

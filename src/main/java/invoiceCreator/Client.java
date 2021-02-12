@@ -11,6 +11,13 @@ public class Client {
     private String email;
     private long phoneNumber;
 
+    public Client(String nazwaFirmy, String s, String warszawa, String ulica, String s1, String s2, String s3, long l) {
+    }
+
+    public Client() {
+
+    }
+
 
     public String getCompanyName() {
         return companyName;

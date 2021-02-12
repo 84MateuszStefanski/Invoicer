@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class RegisterProduct {
+public class RegisterProduct implements Registrar {
 
     private List<Product> productList = new ArrayList<>();
     String userChoice;
 
-    public void registerProduct() {
+    @Override
+    public void register() {
         Scanner scanner = new Scanner(System.in);
         Product product = new Product();
         userChoice = scanner.nextLine();
@@ -29,4 +30,5 @@ public class RegisterProduct {
     public List<Product> getProductList() {
         return productList;
     }
+
 }

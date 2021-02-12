@@ -5,11 +5,12 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class RegisterClient {
+public class RegisterClient implements Registrar{
     Scanner scanner = new Scanner(System.in);
     private List<Client> clientList = new ArrayList<>();
 
-    public void registerClient() {
+    @Override
+    public void register() {
         Client client = new Client();
         String userChoice ;
         Long userChoice2 ;
@@ -29,7 +30,7 @@ public class RegisterClient {
         userChoice = scanner.nextLine();
         client.setStreetName(userChoice);
 
-        System.out.println("Enter your street name and press enter");
+        System.out.println("Enter your street number and press enter");
         userChoice = scanner.nextLine();
         client.setStreetNumber(userChoice);
 

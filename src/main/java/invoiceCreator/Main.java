@@ -5,12 +5,17 @@ import java.util.Scanner;
 
 public class Main {
 
-    static Scanner sc = new Scanner(System.in);
-    static RegisterClient registerClient = new RegisterClient();
-    static RegisterProduct registerProduct = new RegisterProduct();
-    static Sale sale = new Sale();
-
     public static void main(String[] args) throws InputMismatchException {
+        run();
+    }
+
+
+    private static void run() {
+        Scanner sc = new Scanner(System.in);
+        RegisterClient registerClient = new RegisterClient();
+        RegisterProduct registerProduct = new RegisterProduct();
+        Sale sale = new Sale();
+
         System.out.println();
         System.out.println("#####################################################################");
         System.out.println("#                    Welcome.This is Invoicer                       #");
@@ -28,13 +33,17 @@ public class Main {
             userChoice = sc.nextLine();
             if (userChoice.trim().equals("1")) {
                 System.out.println("Register new client ");
-                registerClient.registerClient();
+                registerClient.register();
             } else if (userChoice.trim().equals("2")) {
-                registerProduct.registerProduct();
+                System.out.println("Register new product ");
+                registerProduct.register();
             } else if (userChoice.trim().equals("3")) {
+                System.out.println("Sell products ");
                 sale.getPayAll();
             } else if (userChoice.trim().equalsIgnoreCase("x")) {
-                System.out.println("Thank You for using my program");
+                System.out.println("###############################################################################");
+                System.out.println("#                    Thank You for using my program :)                        #");
+                System.out.println("###############################################################################");
             } else {
                 System.out.println("Make your choice again");
             }

@@ -11,6 +11,7 @@ public class Sale {
     Product product = new Product();
     Scanner sc = new Scanner(System.in);
     TaxAndPriceCount taxCount = new TaxAndPriceCount();
+    RegisterProduct registerProduct = new RegisterProduct();
 
     // metoda zwraca pełną kwotę do zapłaty za jeden produkt
     public BigDecimal payForAll(Product product, BigDecimal quantity) throws Exception {
@@ -49,6 +50,15 @@ public class Sale {
         }
         return payAllItems;
     }
+
+//    public BigDecimal payForAllshopping(BigDecimal quantity, Product... products){
+//        quantity = sc.nextBigDecimal();
+//        for (int i = 0; i < products.length; i++) {
+//            registerProduct.getProductList().
+//        }
+//    }
+
+
 
 
     public int getInvoiceNr() {

@@ -1,9 +1,8 @@
 package invoiceCreator;
 
-public class PaymentMethod {
+public enum PaymentMethod {
 
-    private String paymentOperator;
-    private boolean cashOrCard;
-    private String paymentTermInDays;
+    CARD, CASH, ELECTRONICPAYMENT, PAYMENTTERMINDAYS
+
 
 }
